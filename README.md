@@ -10,15 +10,12 @@ Vaccine hesitancy presents a significant public health challenge, especially dur
 To assist public health agencies in improving vaccination rates by identifying key hesitancy drivers and predicting individuals less likely to get vaccinated for H1N1 and seasonal influenza.
 
 ##### Data Source:
-Data was obtained from the DrivenData "Flu Shot Learning" competition. It contains:
+Data was obtained from the DrivenData "Flu Shot Learning" competition https://www.drivendata.org/competitions/66/flu-shot-learning/page/210/. It contains:
 
-Demographics (age, race, education, income)
-
-Behavior and risk perception (mask usage, gathering behavior, health worker status)
-
-Opinions on vaccine effectiveness and safety
-
-Labels indicating whether the individual received H1N1 and/or seasonal flu vaccines.
+~ Demographics (age, race, education, income)
+~ Behavior and risk perception (mask usage, gathering behavior, health worker status)
+~ Opinions on vaccine effectiveness and safety
+~ Labels indicating whether the individual received H1N1 and/or seasonal flu vaccines.
 
 #### 🧮 Problem Statement
 To develop predictive models that:
@@ -39,20 +36,20 @@ To develop predictive models that:
 5. Provide recommendations for improving vaccine campaigns based on insights.
 
 ##### 🧹 Data Preprocessing
-Missing values were imputed using appropriate strategies, mode for the categorical data and mean for numerical data.
+1. Missing values were imputed using appropriate strategies, mode for the categorical data and mean for numerical data.
 
-Categorical variables were encoded using one-hot encoding.
+2. Categorical variables were encoded using one-hot encoding.
 
-Feature scaling was done using StandardScaler to normalize input for models.
+3. Feature scaling was done using StandardScaler to normalize input for models.
 
-The dataset was split into training and testing sets (80/20 split).
+4. The dataset was split into training and testing sets (80/20 split).
 
 ##### 🧪 Modeling
 Two models were trained separately for each target (H1N1 and Seasonal vaccines):
 
-Logistic Regression: For interpretability and baseline comparison.
+~ Logistic Regression: For interpretability and baseline comparison.
 
-Decision Tree Classifier: To visualize decision paths and extract rules.
+~ Decision Tree Classifier: To visualize decision paths and extract rules.
 
 Each model was trained, and class probabilities were predicted. ROC-AUC scores were used for evaluation.
 
